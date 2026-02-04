@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+
+    /* 品牌色 - 高端建筑美学 */
+    --brand-warm: 30 20% 96%;
+    --brand-stone: 30 10% 40%;
+    --brand-cream: 40 30% 94%;
+    --brand-gold: 40 60% 50%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* 平滑滚动 */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 自定义滚动条 - 极简风格 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+
+  /* 选中文本样式 */
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer components {
+  /* 建筑网格布局 */
+  .grid-architectural {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* 玻璃态效果 */
+  .glass {
+    @apply bg-background/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* 高端卡片样式 */
+  .card-luxury {
+    @apply bg-card rounded-xl border border-border/50 shadow-sm;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:shadow-lg hover:border-border;
+  }
+
+  /* 图片容器 - 保持比例 */
+  .image-container {
+    @apply relative overflow-hidden rounded-lg;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* 渐变遮罩 */
+  .gradient-mask {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+
+  /* 文字渐变 */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-foreground to-foreground/70;
+  }
+
+  /* 按钮样式增强 */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground;
+    @apply hover:bg-primary/90 active:scale-[0.98];
+    @apply transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply border border-border bg-transparent;
+    @apply hover:bg-accent hover:text-accent-foreground;
+    @apply transition-all duration-200;
+  }
+
+  /* 输入框焦点样式 */
+  .input-focus {
+    @apply focus:ring-2 focus:ring-ring focus:ring-offset-2;
+    @apply focus:border-transparent;
+    @apply transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  /* 动画延迟 */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  /* Marquee 动画 */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+  
+  @keyframes marquee-reverse {
+    from { transform: translateX(calc(-100% - var(--gap))); }
+    to { transform: translateX(0); }
+  }
+  
+  .animate-marquee {
+    animation: marquee linear infinite;
+  }
+  
+  .animate-marquee-reverse {
+    animation: marquee-reverse linear infinite;
+  }
+
+  /* Shimmer 动画 */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Gradient 动画 */
+  @keyframes gradient-xy {
+    0%, 100% {
+      background-size: 400% 400%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+  
+  .animate-gradient-xy {
+    animation: gradient-xy 15s ease infinite;
+  }
+
+  /* Pulse glow */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Magic UI - Shimmer Slide */
+  @keyframes shimmer-slide {
+    to {
+      transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  
+  .animate-shimmer-slide {
+    animation: shimmer-slide var(--speed) ease-in-out infinite alternate;
+  }
+
+  /* Magic UI - Spin Around */
+  @keyframes spin-around {
+    0% {
+      transform: translateZ(0) rotate(0);
+    }
+    15%, 35% {
+      transform: translateZ(0) rotate(90deg);
+    }
+    65%, 85% {
+      transform: translateZ(0) rotate(270deg);
+    }
+    100% {
+      transform: translateZ(0) rotate(360deg);
+    }
+  }
+  
+  .animate-spin-around {
+    animation: spin-around calc(var(--speed) * 2) infinite linear;
+  }
+
+  /* Magic UI - Border Beam */
+  @keyframes border-beam {
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  
+  .animate-border-beam {
+    animation: border-beam calc(var(--duration) * 1s) infinite linear;
+  }
+
+  /* Magic UI - Marquee Vertical */
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration) linear infinite;
+  }
+
+  /* 文本平衡 */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* 隐藏滚动条但可滚动 */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 禁止选中 */
+  .no-select {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* 不确定进度条动画 */
+  @keyframes indeterminate {
+    0% {
+      left: -33%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}

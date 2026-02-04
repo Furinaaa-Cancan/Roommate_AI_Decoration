@@ -1,0 +1,68 @@
+export const DESIGN_STYLES = [
+  {
+    id: 'wabi_sabi',
+    name: '侘寂极简',
+    nameEn: 'Wabi-Sabi Minimal',
+    description: '天然材质，柔和大地色系，禅意美学',
+    image: '/images/styles/wabi-sabi.jpg',
+    colors: ['#E8E4DF', '#C4B8A5', '#8B7355'],
+  },
+  {
+    id: 'cream_style',
+    name: '奶油风',
+    nameEn: 'Cream Style',
+    description: '柔和暖色调，法式慵懒，温馨舒适',
+    image: '/images/styles/cream.jpg',
+    colors: ['#FFF8F0', '#F5E6D3', '#D4C4B0'],
+  },
+  {
+    id: 'modern_luxury',
+    name: '现代轻奢',
+    nameEn: 'Modern Luxury',
+    description: '简洁线条，金属点缀，精致优雅',
+    image: '/images/styles/modern-luxury.jpg',
+    colors: ['#2C2C2C', '#C9A962', '#F5F5F5'],
+  },
+  {
+    id: 'modern_chinese',
+    name: '新中式',
+    nameEn: 'Modern Chinese',
+    description: '传统与现代结合，木质元素，禅意空间',
+    image: '/images/styles/modern-chinese.jpg',
+    colors: ['#8B4513', '#D4A574', '#F5F5DC'],
+  },
+  {
+    id: 'scandinavian',
+    name: '北欧风',
+    nameEn: 'Scandinavian',
+    description: '白色基调，自然木质，功能性家具',
+    image: '/images/styles/scandinavian.jpg',
+    colors: ['#FFFFFF', '#E8DCC4', '#5C8A8A'],
+  },
+  {
+    id: 'industrial',
+    name: '工业风',
+    nameEn: 'Industrial',
+    description: '裸露砖墙，金属元素，复古工厂感',
+    image: '/images/styles/industrial.jpg',
+    colors: ['#4A4A4A', '#8B4513', '#D4D4D4'],
+  },
+  {
+    id: 'french_vintage',
+    name: '法式复古',
+    nameEn: 'French Vintage',
+    description: '优雅古典，浪漫情调，精致雕花',
+    image: '/images/styles/french-vintage.jpg',
+    colors: ['#F5F0E6', '#C9A962', '#6B5B4F'],
+  },
+  {
+    id: 'japanese_minimal',
+    name: '日式极简',
+    nameEn: 'Japanese Minimal',
+    description: '榻榻米，障子门，天然材质',
+    image: '/images/styles/japanese.jpg',
+    colors: ['#F5F5DC', '#8B7355', '#2F4F4F'],
+  },
+] as const
+
+export type StyleId = typeof DESIGN_STYLES[number]['id']

@@ -1,0 +1,35 @@
+# NanoBanana AI - Python Dependencies
+
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.25
+pymysql==1.1.0
+redis==5.0.1
+
+# HTTP Client
+httpx==0.26.0
+requests==2.31.0
+
+# AI/ML
+replicate==0.22.0
+Pillow==10.2.0
+
+# Utils
+python-dotenv==1.0.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Kaggle (for dataset download)
+kaggle==1.5.16
+
+# Testing
+pytest==7.4.4
+pytest-asyncio==0.23.3
+
+# Dev
+black==24.1.0
+isort==5.13.2
