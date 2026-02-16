@@ -51,3 +51,12 @@ coverage/
 *.ckpt
 *.safetensors
 *.bin
+
+# Privacy images (QR codes, etc.)
+56acda7da2749042222a103c8276ef80.jpg
+d971ba76018d4b1f6aba32bde295b617.jpg
+
+# Payment QR codes
+frontend/public/payment/*.jpg
+frontend/public/payment/*.png
+frontend/public/payment/*.jpeg
