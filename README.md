@@ -1,4 +1,4 @@
-# Roommate - AI 室内设计平台
+# Roommate AI装修平台
 
 <div align="center">
 
@@ -7,8 +7,7 @@
   ---
   
   ### 上传毛坯房照片 → 30秒生成专业装修效果图 → 一键获取材料清单
-  
-  **让每个人都能轻松看见「未来的家」**
+ **Roommate AI装修平台是一个基于 AI 的智能装修设计平台,让每个人都能轻松看见「未来的家」。**
   
   [![GitHub stars](https://img.shields.io/github/stars/Furinaaa-Cancan/NanoBanana-AI?style=social)](https://github.com/Furinaaa-Cancan/NanoBanana-AI)
   [![License](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
@@ -122,7 +121,7 @@
 
 ## 解决的问题
 
-| 用户痛点 | Roommate 的解决方案 |
+| 用户痛点 | Roommate AI装修平台的解决方案 |
 |---------|---------------------|
 | 装修前看不到效果 | AI 即时生成 4K 效果图 |
 | 找设计师贵且慢 | 9.9元起,30秒出图 |
@@ -142,7 +141,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                              Roommate 商业模式主循环                             │
+│                           Roommate AI装修平台商业模式主循环                       │
 └─────────────────────────────────────────────────────────────────────────────┘
 
   ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
@@ -628,7 +627,7 @@ chore: 构建/工具
 
 ## License
 
-Copyright 2024 Roommate AI. All rights reserved.
+Copyright 2024 Roommate AI装修平台. All rights reserved.
 
 ---
 
