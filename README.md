@@ -1,14 +1,59 @@
 # 🏠 Roommate - AI 室内设计平台
 
 <div align="center">
-  <img src="./网页图片/3ae9ac2b2bee4798811d3878a6f63168.png" alt="Roommate" width="800"/>
+  
+  ![Roommate 首页](./网页图片/3ae9ac2b2bee4798811d3878a6f63168.png)
+  
+  ### 💡 上传毛坯房照片 → 30秒生成专业装修效果图 → 一键获取材料清单
+  
+  **让每个人都能轻松看见「未来的家」**
+  
+  [![GitHub stars](https://img.shields.io/github/stars/Furinaaa-Cancan/NanoBanana-AI?style=social)](https://github.com/Furinaaa-Cancan/NanoBanana-AI)
+  [![License](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
+  
 </div>
 
-## 💡 一句话介绍
+---
 
-**上传毛坯房照片 → 30秒生成专业装修效果图 → 一键获取材料清单**
+## 🎨 产品展示
 
-Roommate 是一个基于 AI 的智能室内设计平台,让每个人都能轻松看见「未来的家」。
+<table>
+  <tr>
+    <td width="50%">
+      <img src="./网页图片/c5d96338e5d53a9dc79d672502a5ee2e.png" alt="上传界面"/>
+      <p align="center"><b>📤 简洁的上传界面</b></p>
+    </td>
+    <td width="50%">
+      <img src="./网页图片/51cfc6a3f6a481789dc172e89eabaed5.jpg" alt="侘寂风格"/>
+      <p align="center"><b>🎨 侘寂极简风格</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="./网页图片/6099616649bbe28932048c34aa389fe3.jpg" alt="说明资料"/>
+      <p align="center"><b>🛋️ 法式复古风格</b></p>
+    </td>
+    <td width="50%">
+      <img src="./网页图片/677ed5f2f5e2df6923e9826ac2201ecd.jpg" alt="虚拟中间"/>
+      <p align="center"><b>🎭 智能局部编辑</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="./网页图片/99a69d3768f8a0300aa7501e2ff1a515.jpg" alt="修改-删除"/>
+      <p align="center"><b>✨ 多风格切换</b></p>
+    </td>
+    <td width="50%">
+      <img src="./网页图片/9fb094abba1f1c93faf667337f4d5b07.jpg" alt="现代轻奢"/>
+      <p align="center"><b>💎 现代轻奢风格</b></p>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="./网页图片/c4d2768b0bd1419a1c698b641c8ab36b.jpg" alt="奶油风格" width="600"/>
+  <p><b>🍰 奶油法式风格 - 温馨舒适</b></p>
+</div>
 
 ---
 
